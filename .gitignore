@@ -1,0 +1,11 @@
+*.dvi
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.gz
+.vscode
+files
+*.tex
