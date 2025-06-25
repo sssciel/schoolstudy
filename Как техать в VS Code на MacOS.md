@@ -42,13 +42,13 @@
     - Откройте настройки: ``shift + ⌘ + P`` → ``Preferences: Open User Settings (JSON)``
     - Вставьте следующее:
         ```json
-        "pasteImage.insertPattern": "\\begin{center}\n\t\t\\includegraphics[width=\\linewidth]{pasted-images/  ${imageFileName}}\n\t\\end{center}",
+        "pasteImage.insertPattern": "\\begin{figure}[h]\n  \\centering\n  \\includegraphics[width=0.5\\textwidth]{files/${imageFileName}}\n  \\caption{}\n  \\label{fig:${imageFileName}}\n\\end{figure}",
         "pasteImage.filePathConfirmInputBoxMode": "onlyName",
         "pasteImage.encodePath": "none",
         "pasteImage.basePath": "${currentFileDir}",
         "pasteImage.showFilePathConfirmInputBox": true,
         "pasteImage.defaultName": "${currentFileNameWithoutExt}-HH-mm-ss",
-        "pasteImage.path": "${currentFileDir}/pasted-images",
+        "pasteImage.path": "${currentFileDir}/files",
         ```
     Так как вставка изображения и открытие документа находятся на одном шорткате ``⌥ + ⌘ + V``, вам понадобится его поменять, если вы этого еще не сделали:
     - ``shift + ⌘ + P`` → ``Preferences: Open Keyboard Shortcuts``
